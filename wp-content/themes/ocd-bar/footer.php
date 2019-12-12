@@ -14,6 +14,14 @@
 
 	</div><!-- #page -->
 
+
+	<!-- Social Media (Instagram, Facebook) -->
+
+
+	<!-- Section: Address (Tlf, Email, Address) / Newsletter -->
+
+	
+
 	<?php wp_footer(); ?>
 </body>
 </html>

@@ -50,17 +50,9 @@
             <div class="header-inner">
                 <!-- Logo -->
                 <div class="logo-wrapper">
-                    <a href="/yac/">
-                        <img src="/yac/wp-content/uploads/2019/11/logo.png" title="Logo" alt="Logo" />
+                    <a href="/bar">
+                        <img src="/bar/wp-content/uploads/2019/11/logo.png" title="Logo" alt="Logo" />
                     </a>
-                </div>
-
-
-                <!-- Banner: Submit Your Experience --> 
-                <div class="banner">
-                    <div class="container">
-                        <a href="#" title="">Submit your Experience in Køge</a>
-                    </div>
                 </div>
 
                 <!-- Menu Navigation -->
@@ -71,20 +63,6 @@
                             'menu_id'        => 'primary-menu',
                         ) );
                         ?>
-                <!-- Social Media -->
-                <div class="social-media-search">
-                    <?php 
-					if ( is_active_sidebar( 'social-media-header' ) ) : ?>
-						<div class="widget-area widget-area" role="complementary">
-						<?php dynamic_sidebar( 'social-media-header' ); ?>
-						</div>
-						
-					<?php endif; ?>
-                    <div id="search-wrapper">
-                        <?php echo get_search_form() ?>
-                    </div>
-                    <!-- Search -->
-                </div>
                 </nav>
             </div>
         </div>
