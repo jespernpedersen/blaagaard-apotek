@@ -41,10 +41,6 @@
             // Is Desktop
     ?>
     <!-- Desktop Header -->
-
-
-
-
     <header>
         <div class="container">
             <div class="header-inner">

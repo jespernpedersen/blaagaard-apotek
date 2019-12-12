@@ -5,9 +5,9 @@
 */
 
 :root {
-    --primary-color: #008058;
-    --secondary-color: #080808;
-    --gray-background: #b9b9b9;
+    --primary-color: #022b43;
+    --secondary-color: #db8c59;
+    --section-padding: 65px;
 }
 
 
@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: proxima-nova, sans-serif;
 }
 
 
@@ -50,8 +51,24 @@
     grid-column-gap: 30px;
 }
 
+.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bordered-grid {
+    border: 6px solid var(--primary-color);
+    padding: 15px;
+    grid-column-gap: 5px;
+}
+
 p+p {
     margin-top: 40px;
+}
+
+h2 {
+    color: inherit;
+    text-transform: uppercase;
+    font-size: 54px;
 }
 
 
@@ -66,6 +83,21 @@ a {
     text-decoration: none;
 }
 
+.border-button {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: #FFF;
+    display: inline-block;
+    float: right;
+    padding: 28px 40px;
+    font-style: italic;
+    font-size: 24px;
+}
+
+img {
+    max-width: 100%;
+}
+
 
 /* 
 -----------------------------------------------
@@ -73,11 +105,41 @@ a {
 -----------------------------------------------
 */
 
+header {
+    position: absolute;
+    top: 32px;
+    width: 100%;
+    left: 0;
+    padding-top: 35px;
+}
 
-/* Search */
+header .logo-wrapper {
+    text-align: center;
+}
 
+#site-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
 
-/* Social Media */
+#site-navigation ul li {
+    display: inline-block;
+}
+
+#site-navigation ul li:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+#site-navigation ul li a {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFF;
+}
 
 
 /* 
@@ -85,3 +147,103 @@ a {
     FOOTER
 -----------------------------------------------
 */
+
+
+/* 
+-----------------------------------------------
+    SECTION: INTRODUCTION @ Frontpage
+-----------------------------------------------
+*/
+
+.introduction-section {
+    height: 100vh;
+    background-color: var(--primary-color);
+    /* temp */
+}
+
+
+/* 
+-----------------------------------------------
+    SECTION: EVENTS @ Frontpage
+-----------------------------------------------
+*/
+
+.events-section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+/* 
+-----------------------------------------------
+    SECTION: WEEKLY DEAL @ Frontpage
+-----------------------------------------------
+*/
+
+.weekly-deal-section {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.weekly-deal-section .grid {
+    grid-column-gap: 80px;
+}
+
+.weekly-deal-section .deal-inner {
+    padding: 120px 150px;
+    border: 5px solid var(--primary-color);
+}
+
+.weekly-deal-section .deal-image {
+    border: 5px solid var(--primary-color);
+    padding: 10px;
+    height: calc(100% - 84px);
+}
+
+.weekly-deal-section .deal-image figure {
+    overflow: hidden;
+    height: 100%;
+}
+
+.weekly-deal-section h3 {
+    text-transform: uppercase;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.weekly-deal-section h4 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.weekly-deal-section p.price {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/* 
+-----------------------------------------------
+    SECTION: GALLERY @ Frontpage
+-----------------------------------------------
+*/
+
+.gallery-section {
+    background-color: white;
+    color: var(--primary-color);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.gallery-section h2 {
+    margin-bottom: 30px;
+}
