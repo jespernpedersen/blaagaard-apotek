@@ -42,6 +42,12 @@
     height: 100%;
 }
 
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .grid {
     display: grid;
 }
@@ -148,6 +154,19 @@ header .logo-wrapper {
 -----------------------------------------------
 */
 
+footer {
+    background-color: var(--secondary-color);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #FFF;
+}
+
+.social-media {
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+}
+
 
 /* 
 -----------------------------------------------
@@ -195,11 +214,11 @@ header .logo-wrapper {
 
 .weekly-deal-section .deal-inner {
     padding: 120px 150px;
-    border: 5px solid var(--primary-color);
+    border: 6px solid var(--primary-color);
 }
 
 .weekly-deal-section .deal-image {
-    border: 5px solid var(--primary-color);
+    border: 6px solid var(--primary-color);
     padding: 10px;
     height: calc(100% - 84px);
 }
@@ -211,7 +230,7 @@ header .logo-wrapper {
 
 .weekly-deal-section h3 {
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 50px;
     font-weight: bold;

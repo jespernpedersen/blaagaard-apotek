@@ -14,13 +14,19 @@
 
 	</div><!-- #page -->
 
+	<div class="social-media">
+		Social Media
+		<!-- Social Media (Instagram, Facebook) -->
+	</div>
+	<footer>
+		<div class="container">
+			Footer
+			<!-- Section: Address (Tlf, Email, Address) / Newsletter -->
+		</div>
+	</footer>
 
-	<!-- Social Media (Instagram, Facebook) -->
 
 
-	<!-- Section: Address (Tlf, Email, Address) / Newsletter -->
-
-	
 
 	<?php wp_footer(); ?>
 </body>
