@@ -52,6 +52,7 @@ get_header();
                         <?php
                     }
                 }
+                wp_reset_query();
                 ?>
                 </section>
                 <a href="/events" title="Here you can see all our events" class="border-button">See All Events</a>
@@ -65,18 +66,18 @@ get_header();
                     <!-- Weekly Deal -->
                     <div class="weekly-deal">
                         <div class="deal-inner">
-                            <h3>Weekly Deal</h3>
+                            <h3><?php echo get_field("weekly_deal_title") ?></h3>
                             <div class="deal">
-                                <h4>Moscow Mule <br>with a twist</h4>
-                                <p>This week's recipe was created by our bartendedr James - give it a try!</p>
-                                <p class="price">40 -</p>
+                                <h4><?php echo get_field("weekly_deal_product_title"); ?></h4>
+                                <p><?php echo get_field("weekly_deal_description"); ?></p>
+                                <p class="price"><?php echo get_field("weekly_deal_price"); ?></p>
                             </div>
                         </div>
-                        <a href="#" title="#" class="border-button">See Our Menu</a>
+                        <a href="<?php echo get_field("weekly_deal_link"); ?>" title="#" class="border-button">See Our Menu</a>
                     </div><!-- end .weekly-deal -->
                     <div class="deal-image">
                         <figure>
-                            <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="#" />
+                            <img src="<?php echo get_field("weekly_deal_image"); ?>" title="#" alt="#" />
                         </figure>
                     </div>
                 </div>

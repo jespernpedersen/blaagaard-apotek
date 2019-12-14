@@ -189,7 +189,7 @@ header .logo-wrapper {
 }
 
 header .logo-wrapper img {
-    max-width: 120px;
+    max-width: 325px;
 }
 
 
@@ -237,22 +237,22 @@ body:not(.home) .social-media {
 
 #menu-social-media li.ig a:before {
     /* Placeholder */
-    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+    background-image: url("../images/ig.png");
 }
 
 #menu-social-media li.fb a:before {
     /* Placeholder */
-    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+    background-image: url("../images/fb.png");
 }
 
 .home #menu-social-media li.ig a:before {
     /* Placeholder */
-    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+    background-image: url("../images/ig-colored.png");
 }
 
 .home #menu-social-media li.fb a:before {
     /* Placeholder */
-    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+    background-image: url("../images/fb-colored.png");
 }
 
 .home #menu-social-media li a {
@@ -513,4 +513,107 @@ h1.page-header {
 
 .events {
     color: #FFF;
+}
+
+
+/* 
+-----------------------------------------------
+    PAGE: OUR MENU
+-----------------------------------------------
+*/
+
+.page-template-our-menu main {
+    color: white;
+}
+
+.page-template-our-menu .banner {
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+}
+
+.page-template-our-menu .banner:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    z-index: 1;
+}
+
+.page-template-our-menu .banner h2,
+.page-template-our-menu .banner h3 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.page-template-our-menu .page-info {
+    margin-bottom: 100px;
+}
+
+.page-template-our-menu .banner h2 {
+    font-size: 56px;
+}
+
+.page-template-our-menu .banner h3 {
+    font-size: 34px;
+}
+
+.page-template-our-menu .banner h2 {
+    color: inherit;
+    margin-bottom: 0;
+}
+
+.page-template-our-menu .featured-banner {
+    margin-bottom: 30px;
+    border-color: white;
+    height: 500px;
+}
+
+.page-template-our-menu main h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    /* width:  100%; */
+}
+
+.page-template-our-menu main .grid {
+    grid-row-gap: 30px;
+}
+
+.page-template-our-menu main .menu p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page-template-our-menu main .menu p+p {
+    margin-top: 25px;
+}
+
+.page-template-our-menu main .menu p em {
+    font-style: normal;
+}
+
+.page-template-our-menu main .beer-menu {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.page-template-our-menu main .beer-menu p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-template-our-menu .bordered-grid.menu {
+    border-color: white;
+    padding: 50px 100px;
 }

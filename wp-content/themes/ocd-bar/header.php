@@ -45,7 +45,7 @@
                 <!-- Logo -->
                 <div class="logo-wrapper">
                     <a href="/bar">
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="Logo" alt="Logo" />
+                        <img src="/bar/wp-content/uploads/2019/12/BlaagaardsApotek.png" title="Logo" alt="Logo" />
                     </a>
                 </div>
 
