@@ -55,18 +55,8 @@ add_action( 'wp_enqueue_scripts', 'jnp_scripts' );
  */
 function jnp_widgets_init() {
 	register_sidebar( array(
-		'name'          => 'Sidebar',
-		'id'            => 'sidebar-1',
-		'description'   => 'Add widgets',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	
-	register_sidebar( array(
-        'name'          => 'Social Media Header',
-        'id'            => 'social-media-header',
+        'name'          => 'Social Media',
+        'id'            => 'social-media',
         'before_widget' => '<div class="widget">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="title">',

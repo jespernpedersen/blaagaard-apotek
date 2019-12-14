@@ -15,8 +15,12 @@
 	</div><!-- #page -->
 
 	<div class="social-media">
-		Social Media
-		<!-- Social Media (Instagram, Facebook) -->
+		<?php
+			if ( is_active_sidebar( 'social-media' ) ) : ?>
+				<div id="social-media-widget" class="chw-widget-area widget-area" role="complementary">
+					<?php dynamic_sidebar( 'social-media' ); ?>
+				</div> 
+			<?php endif; ?>	
 	</div>
 	<footer>
 		<div class="container">

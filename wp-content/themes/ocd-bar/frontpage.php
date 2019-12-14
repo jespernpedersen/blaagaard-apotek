@@ -25,6 +25,36 @@ get_header();
         <div class="events-section">
             <div class="container">
                 <h2>Events</h2>
+                <!-- Featured Events -->
+                <section class="events">
+                <?php 
+                $posts = get_posts( array(
+                    'post_type'      => 'event',
+                    'order'          => 'DESC',
+                    'orderby'        => 'meta_value',
+                    'meta_key'       => 'is_post_featured',
+                ));
+
+                if( $posts ) {
+                    foreach( $posts as $post ) {
+                        ?>
+                        <div class="event-item">
+                            <div class="event-wrapper">
+                                <div class="event-bg-image" style="background-image: url('<?php echo get_the_post_thumbnail_url($post->ID);  ?>')">
+                                    <div class="event-content-wrapper">
+                                        <h3><?php echo get_the_title($post->ID); ?>
+                                        <h4>Host <?php echo get_field("event_host"); ?></h4>
+                                        <p>Every <timedate><?php echo get_field("event_date"); ?></timedate></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                }
+                ?>
+                </section>
+                <a href="/events" title="Here you can see all our events" class="border-button">See All Events</a>
             </div>
         </div>
 
@@ -57,26 +87,7 @@ get_header();
         <div class="gallery-section">
             <div class="container">
                 <h2>Gallery</h2>
-                <div class="bordered-grid grid grid-3">
-                    <figure>
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="" />
-                    </figure>
-                    <figure>
-                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="#" alt="" />
-                    </figure>
-                </div>
+                <?php echo do_shortcode('[gallery category="4"]') ?>   
                 <a href="#" title="#" class="border-button">See Our Gallery</a>
             </div>
         </div>

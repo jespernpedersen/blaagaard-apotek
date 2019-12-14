@@ -62,7 +62,7 @@
 }
 
 .bordered-grid {
-    border: 6px solid var(--primary-color);
+    border: 7px solid var(--primary-color);
     padding: 15px;
     grid-column-gap: 5px;
 }
@@ -98,6 +98,7 @@ a {
     padding: 28px 40px;
     font-style: italic;
     font-size: 24px;
+    font-weight: bold;
 }
 
 img {
@@ -117,6 +118,10 @@ header {
     width: 100%;
     left: 0;
     padding-top: 35px;
+}
+
+body:not(.home) header {
+    position: static;
 }
 
 header .logo-wrapper {
@@ -145,6 +150,117 @@ header .logo-wrapper {
     font-size: 24px;
     text-transform: uppercase;
     color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+#site-navigation ul li a:before,
+#site-navigation ul li a:after {
+    content: "";
+    border-bottom: 1px solid #FFF;
+    width: 20px;
+    height: 1px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+
+#site-navigation ul li.current-menu-item a,
+#site-navigation ul li:hover a {
+    color: var(--secondary-color);
+}
+
+#site-navigation ul li.current-menu-item a:before,
+#site-navigation ul li.current-menu-item a:after,
+#site-navigation ul li:hover a:before,
+#site-navigation ul li:hover a:after {
+    opacity: 1;
+}
+
+#site-navigation ul li a:before {
+    margin-right: 12px;
+}
+
+#site-navigation ul li a:after {
+    margin-left: 12px;
+}
+
+header .logo-wrapper img {
+    max-width: 120px;
+}
+
+
+/* 
+-----------------------------------------------
+    SOCIAL MEDIA
+-----------------------------------------------
+*/
+
+.social-media {
+    text-align: center;
+    width: 100%;
+}
+
+body:not(.home) .social-media {
+    padding-top: 46px;
+}
+
+.social-media {
+    padding-bottom: 46px;
+}
+
+#menu-social-media li {
+    display: inline-block;
+}
+
+#menu-social-media li:not(:last-of-type) {
+    margin-right: 72px;
+}
+
+#menu-social-media li a:before {
+    content: "";
+    width: 33px;
+    height: 33px;
+    vertical-align: middle;
+    background-size: 100% auto;
+    background-position: center center;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+#menu-social-media li a {
+    font-size: 18px;
+}
+
+#menu-social-media li.ig a:before {
+    /* Placeholder */
+    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+}
+
+#menu-social-media li.fb a:before {
+    /* Placeholder */
+    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+}
+
+.home #menu-social-media li.ig a:before {
+    /* Placeholder */
+    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+}
+
+.home #menu-social-media li.fb a:before {
+    /* Placeholder */
+    background-image: url("/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png");
+}
+
+.home #menu-social-media li a {
+    color: var(--primary-color);
+}
+
+#menu-social-media li a {
+    color: #FFF;
 }
 
 
@@ -161,12 +277,6 @@ footer {
     color: #FFF;
 }
 
-.social-media {
-    text-align: center;
-    width: 100%;
-    padding: 25px 0;
-}
-
 
 /* 
 -----------------------------------------------
@@ -176,22 +286,95 @@ footer {
 
 .introduction-section {
     height: 100vh;
-    background-color: var(--primary-color);
+    background-color: black;
     /* temp */
 }
 
 
 /* 
 -----------------------------------------------
-    SECTION: EVENTS @ Frontpage
+    SECTION: EVENTS @FRONTPAGE, EVENTS
 -----------------------------------------------
 */
 
 .events-section {
     background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding-top: var(--section-padding);
-    padding-bottom: var(--section-padding);
+    color: white;
+    padding-top: 77px;
+    padding-bottom: 95px;
+}
+
+.events-section .border-button {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.events-section h2 {
+    margin-bottom: 30px;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 38px;
+}
+
+.event-item {
+    text-align: center;
+    height: 356px;
+}
+
+.event-item .event-wrapper,
+.event-item .event-wrapper .event-bg-image {
+    height: 100%;
+}
+
+.event-item .event-wrapper .event-bg-image {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.event-item .event-wrapper .event-bg-image:before {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    pointer-events: none;
+    opacity: 0.2;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.event-item .event-wrapper .event-bg-image .event-content-wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 75px;
+    width: 100%;
+    text-align: center;
+}
+
+.event-item .event-wrapper .event-bg-image .event-content-wrapper h3,
+.event-item .event-wrapper .event-bg-image .event-content-wrapper h4,
+.event-item .event-wrapper .event-bg-image .event-content-wrapper p {
+    text-transform: uppercase;
+}
+
+.event-item .event-wrapper .event-bg-image .event-content-wrapper h3 {
+    font-size: 36px;
+}
+
+.event-item .event-wrapper .event-bg-image .event-content-wrapper h4 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.event-item .event-wrapper .event-bg-image .event-content-wrapper p {
+    font-size: 32px;
+    font-weight: bold;
 }
 
 
@@ -214,11 +397,11 @@ footer {
 
 .weekly-deal-section .deal-inner {
     padding: 120px 150px;
-    border: 6px solid var(--primary-color);
+    border: 7px solid var(--primary-color);
 }
 
 .weekly-deal-section .deal-image {
-    border: 6px solid var(--primary-color);
+    border: 7px solid var(--primary-color);
     padding: 10px;
     height: calc(100% - 84px);
 }
@@ -258,11 +441,76 @@ footer {
 
 .gallery-section {
     background-color: white;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
 }
 
+.gallery-section .bordered-grid {
+    border-color: var(--secondary-color);
+}
+
+.gallery-section .border-button {
+    background-color: var(--secondary-color);
+}
+
 .gallery-section h2 {
     margin-bottom: 30px;
+}
+
+.gallery-section .gallery-columns-3 {
+    display: grid;
+    border: 7px solid var(--secondary-color);
+    padding: 15px;
+    grid-column-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* 
+-----------------------------------------------
+    SUBPAGE GENERAL
+-----------------------------------------------
+*/
+
+body:not(.home) {
+    background-color: var(--primary-color);
+}
+
+h1.page-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: var(--secondary-color);
+    margin-top: 100px;
+}
+
+
+/* 
+-----------------------------------------------
+    PAGE: EVENTS
+-----------------------------------------------
+*/
+
+.page-info {
+    max-width: 738px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFF;
+    text-align: center;
+}
+
+.filter {
+    width: 100%;
+    background-color: white;
+    color: black;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 85px;
+}
+
+.events {
+    color: #FFF;
 }

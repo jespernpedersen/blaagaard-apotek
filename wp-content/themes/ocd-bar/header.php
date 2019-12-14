@@ -34,8 +34,6 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-
-
     <?php 
     if(!wp_is_mobile()) {
             // Is Desktop
@@ -47,7 +45,7 @@
                 <!-- Logo -->
                 <div class="logo-wrapper">
                     <a href="/bar">
-                        <img src="/bar/wp-content/uploads/2019/11/logo.png" title="Logo" alt="Logo" />
+                        <img src="/bar/wp-content/uploads/2019/12/woocommerce-placeholder.png" title="Logo" alt="Logo" />
                     </a>
                 </div>
 
@@ -60,6 +58,12 @@
                         ) );
                         ?>
                 </nav>
+                <?php if(!is_front_page()) {
+                ?>
+                <h1 class="page-header">
+                    <?php echo the_title(); ?>
+                </h1>
+                <?php }?>
             </div>
         </div>
     </header>
